@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const productForm = document.getElementById('product-form');
     const totalPriceElement = document.getElementById('total-price');
+    const confirmButton = document.getElementById('confirm-button');
+    const receipt = document.getElementById('receipt');
+    const receiptDetails = document.querySelector('#receipt-details tbody');
+    const receiptTotalPrice = document.getElementById('receipt-total-price');
 
     productForm.addEventListener('click', function(event) {
         if (event.target.classList.contains('increment')) {
@@ -25,6 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
             calculateTotalPrice();
         }
     }, true);
+
+    confirmButton.addEventListener('click', function() {
+        generateReceipt();
+    });
 
     function changeQuantity(button, change) {
         const input = button.parentElement.querySelector('input[type="number"]');
@@ -52,5 +60,31 @@ document.addEventListener('DOMContentLoaded', function() {
             totalPrice += quantity * price;
         });
         totalPriceElement.textContent = totalPrice.toFixed(2);
+    }
+
+    function generateReceipt() {
+        let receiptContent = '';
+        let totalPrice = 0;
+        receiptDetails.innerHTML = ''; // Clear previous receipt details
+        document.querySelectorAll('.product').forEach(function(product) {
+            const label = product.querySelector('label').textContent;
+            const input = product.querySelector('input[type="number"]');
+            const quantity = parseInt(input.value);
+            const price = parseFloat(input.getAttribute('data-price'));
+            if (quantity > 0) {
+                const total = quantity * price;
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${label}</td>
+                    <td>${quantity}</td>
+                    <td>Tk.${price.toFixed(2)}</td>
+                    <td>Tk.${total.toFixed(2)}</td>
+                `;
+                receiptDetails.appendChild(row);
+                totalPrice += total;
+            }
+        });
+        receiptTotalPrice.textContent = totalPrice.toFixed(2);
+        receipt.style.display = 'block';
     }
 });
