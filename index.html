@@ -8,13 +8,13 @@
 </head>
 <body>
     <div class="container">
-        <div id="img-container">
-            <img src="img/sultana.jpg" alt="Sultana's Blossoms" height="150px" width="200px" >
-        </div>
+        <div id="img-container">             
+            <img src="img/sultana.jpg" alt="Sultana's Blossoms" height="150px" width="200px" >         
+        </div>         
         <h1 id="head">Sultana's Blossoms</h1>
         <form id="product-form">
             <div class="product">
-                <label for="product1">Product 1 ($10 each):</label>
+                <label for="product1">Product 1 (Tk.10 each):</label>
                 <div class="quantity-control">
                     <button type="button" class="decrement">-</button>
                     <input type="number" id="product1" data-price="10" min="0" value="0">
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="product">
-                <label for="product2">Product 2 ($15 each):</label>
+                <label for="product2">Product 2 (Tk.15 each):</label>
                 <div class="quantity-control">
                     <button type="button" class="decrement">-</button>
                     <input type="number" id="product2" data-price="15" min="0" value="0">
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="product">
-                <label for="product3">Product 3 ($20 each):</label>
+                <label for="product3">Product 3 (Tk.20 each):</label>
                 <div class="quantity-control">
                     <button type="button" class="decrement">-</button>
                     <input type="number" id="product3" data-price="20" min="0" value="0">
@@ -38,9 +38,27 @@
                 </div>
             </div>
             <div class="total">
-                <p>Total Price: $<span id="total-price">0</span></p>
+                <p>Total Price: Tk.<span id="total-price">0</span></p>
             </div>
+            <button type="button" id="confirm-button" class="confirm-button">Confirm</button>
         </form>
+        <div id="receipt" class="receipt" style="display: none;">
+            <h2>Cash Receipt</h2>
+            <table id="receipt-details">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Total Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Receipt details will be inserted here -->
+                </tbody>
+            </table>
+            <p class="grand-total">Grand Total: Tk.<span id="receipt-total-price"></span></p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
