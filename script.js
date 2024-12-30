@@ -2,9 +2,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const productForm = document.getElementById('product-form');
     const totalPriceElement = document.getElementById('total-price');
     const confirmButton = document.getElementById('confirm-button');
+    const toggleBuyingPriceButton = document.getElementById('toggle-buying-price-button');
     const receipt = document.getElementById('receipt');
     const receiptDetails = document.querySelector('#receipt-details tbody');
     const receiptTotalPrice = document.getElementById('receipt-total-price');
+    const receiptTotalBuyingPrice = document.createElement('span');
+    receiptTotalBuyingPrice.id = 'receipt-total-buying-price';
+    receiptTotalBuyingPrice.style.display = 'inline';
+    const grandTotalBuyingPrice = document.createElement('p');
+    grandTotalBuyingPrice.classList.add('grand-total', 'buying-price-column');
+    grandTotalBuyingPrice.textContent = 'Grand Total Buying Price: Tk.';
+    grandTotalBuyingPrice.appendChild(receiptTotalBuyingPrice);
+    document.querySelector('.receipt').appendChild(grandTotalBuyingPrice);
+
+    let showBuyingPrice = true;
 
     productForm.addEventListener('click', function(event) {
         if (event.target.classList.contains('increment')) {
@@ -32,6 +43,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     confirmButton.addEventListener('click', function() {
         generateReceipt();
+    });
+
+    toggleBuyingPriceButton.addEventListener('click', function() {
+        showBuyingPrice = !showBuyingPrice;
+        toggleBuyingPriceVisibility(showBuyingPrice);
     });
 
     function changeQuantity(button, change) {
@@ -63,28 +79,42 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function generateReceipt() {
-        let receiptContent = '';
         let totalPrice = 0;
+        let totalBuyingPrice = 0;
         receiptDetails.innerHTML = ''; // Clear previous receipt details
         document.querySelectorAll('.product').forEach(function(product) {
             const label = product.querySelector('label').textContent;
             const input = product.querySelector('input[type="number"]');
             const quantity = parseInt(input.value);
             const price = parseFloat(input.getAttribute('data-price'));
+            const buyingPrice = parseFloat(input.getAttribute('data-buying-price'));
             if (quantity > 0) {
                 const total = quantity * price;
+                const buyingTotal = quantity * buyingPrice;
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${label}</td>
                     <td>${quantity}</td>
+                    <td class="buying-price-column">Tk.${buyingPrice.toFixed(2)}</td>
                     <td>Tk.${price.toFixed(2)}</td>
+                    <td class="buying-price-column">Tk.${buyingTotal.toFixed(2)}</td>
                     <td>Tk.${total.toFixed(2)}</td>
                 `;
                 receiptDetails.appendChild(row);
                 totalPrice += total;
+                totalBuyingPrice += buyingTotal;
             }
         });
         receiptTotalPrice.textContent = totalPrice.toFixed(2);
+        receiptTotalBuyingPrice.textContent = totalBuyingPrice.toFixed(2);
+        toggleBuyingPriceVisibility(showBuyingPrice);
         receipt.style.display = 'block';
+    }
+
+    function toggleBuyingPriceVisibility(show) {
+        document.querySelectorAll('.buying-price-column').forEach(function(element) {
+            element.style.display = show ? 'table-cell' : 'none';
+        });
+        receiptTotalBuyingPrice.style.display = show ? 'inline' : 'none';
     }
 });
