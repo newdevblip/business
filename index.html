@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Selector</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.maateen.me/charu-chandan-3d/font.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -13,27 +14,409 @@
         </div>         
         <h1 id="head">Sultana's Blossoms</h1>
         <form id="product-form">
+            
             <div class="product">
-                <label for="product1">Product 1 (Tk.10 each):</label>
+                <label for="product1">আড়ং প্লেট:</label>
                 <div class="quantity-control">
                     <button type="button" class="decrement">-</button>
-                    <input type="number" id="product1" data-price="10" min="0" value="0">
+                    <input type="number" id="product1" data-price="20" data-buying-price="120" min="0" value="0">
                     <button type="button" class="increment">+</button>
                 </div>
             </div>
             <div class="product">
-                <label for="product2">Product 2 (Tk.15 each):</label>
+                <label for="product2">স্টার প্লেট:</label>
                 <div class="quantity-control">
                     <button type="button" class="decrement">-</button>
-                    <input type="number" id="product2" data-price="15" min="0" value="0">
+                    <input type="number" id="product2" data-price="150" data-buying-price="90" min="0" value="0">
                     <button type="button" class="increment">+</button>
                 </div>
             </div>
             <div class="product">
-                <label for="product3">Product 3 (Tk.20 each):</label>
+                <label for="product3">মাছ প্লেট:</label>
                 <div class="quantity-control">
                     <button type="button" class="decrement">-</button>
-                    <input type="number" id="product3" data-price="20" min="0" value="0">
+                    <input type="number" id="product3" data-price="250" data-buying-price="150" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product4">দাগ প্লেট:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product4" data-price="190" data-buying-price="120" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product5">লতা বড় প্লেট:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product5" data-price="190" data-buying-price="120" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product6">স্টার গ্লাস:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product6" data-price="100" data-buying-price="45" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product7">লতা গ্লাস:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product7" data-price="120" data-buying-price="60" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product8">মিনি গ্লাস:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product8" data-price="50" data-buying-price="25" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product9">coke গ্লাস:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product9" data-price="100" data-buying-price="45" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product10">স্টার মগ:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product10" data-price="120" data-buying-price="60" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product11">লতা মগ:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product11" data-price="130" data-buying-price="75" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product12">স্টার জগ:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product12" data-price="300" data-buying-price="170" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product13">লতা জগ:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product13" data-price="400" data-buying-price="280" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product14">দাগ জগ:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product14" data-price="390" data-buying-price="270" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product15">রাইস বোল:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product15" data-price="300" data-buying-price="170" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            
+            
+            <div class="product">
+                <label for="product16">মাজা চিকন কাপ:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product16" data-price="100" data-buying-price="60" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product17">স্টার কাপ:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product17" data-price="100" data-buying-price="60" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product18">কয়েন কাপ:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product18" data-price="120" data-buying-price="65" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product19">আড়ং কাপ:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product19" data-price="120" data-buying-price="75" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product20">লতা কাপ:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product20" data-price="120" data-buying-price="75" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product21">দাগ কাপ:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product21" data-price="120" data-buying-price="75" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product22">লবণ বাটি:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="produc22" data-price="100" data-buying-price="50" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product24">৫p বাটি সেট:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product24" data-price="500" data-buying-price="275" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product25">মিনি বাটি:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product25" data-price="100" data-buying-price="35" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product26">গোল কারি পাতিল:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product26" data-price="750" data-buying-price="390" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product27">হাতল কারি পাতিল:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product27" data-price="750" data-buying-price="420" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product28">বাটি কারি পাতিল:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product28" data-price="550" data-buying-price="390" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product29">লতা কারি পাতিল:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product29" data-price="800" data-buying-price="500" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product30">কয়েন কারি পাতিল:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product30" data-price="800" data-buying-price="500" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product31">দাগ কারি পাতিল:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product31" data-price="800" data-buying-price="500" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product32">স্যুপ চামচ:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product32" data-price="100" data-buying-price="50" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product33">ফিরনি চামচ:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product33" data-price="80" data-buying-price="45" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product34">ডাল চামচ:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product34" data-price="130" data-buying-price="95" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product35">কারি চামচ:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product35" data-price="130" data-buying-price="95" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product36">রাইস চামচ:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product36" data-price="130" data-buying-price="95" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product37">মিষ্টি পাতিল:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product37" data-price="300" data-buying-price="180" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            
+            <div class="product">
+                <label for="product38">রান্নার পাতিল (ছোট):</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product38" data-price="250" data-buying-price="75" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product39">রান্নার পাতিল (বড়):</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product39" data-price="180" data-buying-price="90" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product40">রিং কড়াই:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product40" data-price="350" data-buying-price="250" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product41">রিং সসপ্যান:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product41" data-price="350" data-buying-price="250" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product42">নকশী সসপ্যান:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product42" data-price="350" data-buying-price="250" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            
+            <div class="product">
+                <label for="product43">কাটিং কলমদানি:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product43" data-price="60" data-buying-price="30" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product44">বড় বাসন:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product44" data-price="150" data-buying-price="90" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product45">মাঝারি বাসন:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product45" data-price="120" data-buying-price="70" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product46">ছোট বাসন:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product46" data-price="100" data-buying-price="50" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            
+            <div class="product">
+                <label for="product47">বাটনি পিষনি ১:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product47" data-price="200" data-buying-price="90" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product50">বাটনি পিষনি ২:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product50" data-price="220" data-buying-price="105" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product51">বাটনি পিষনি ৩:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product51" data-price="250" data-buying-price="110" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product48">তাওয়া:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product48" data-price="200" data-buying-price="80" min="0" value="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <label for="product49">ঢাকনা:</label>
+                <div class="quantity-control">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" id="product49" data-price="60" data-buying-price="30" min="0" value="0">
                     <button type="button" class="increment">+</button>
                 </div>
             </div>
@@ -41,15 +424,18 @@
                 <p>Total Price: Tk.<span id="total-price">0</span></p>
             </div>
             <button type="button" id="confirm-button" class="confirm-button">Confirm</button>
+            <button type="button" id="toggle-buying-price-button" class="confirm-button">Toggle</button>
         </form>
         <div id="receipt" class="receipt" style="display: none;">
-            <h2>Cash Receipt</h2>
+            <h2 id="cash">Cash Receipt</h2>
             <table id="receipt-details">
                 <thead>
                     <tr>
-                        <th>Product</th>
-                        <th>Quantity</th>
-                        <th>Unit Price</th>
+                        <th>Product</th> 
+                        <th>Quantity</th> 
+                        <th class="buying-price-column">Buying Price</th> 
+                        <th>Unit Price</th> 
+                        <th class="buying-price-column">Total Buying Price</th> 
                         <th>Total Price</th>
                     </tr>
                 </thead>
@@ -58,6 +444,7 @@
                 </tbody>
             </table>
             <p class="grand-total">Grand Total: Tk.<span id="receipt-total-price"></span></p>
+            <p class="grand-total buying-price-column" id="gtbpc"><span id="receipt-total-buying-price"></span>
         </div>
     </div>
     <script src="script.js"></script>
